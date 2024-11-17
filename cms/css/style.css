@@ -8,8 +8,7 @@
 }
 
 body {
-    background: url("../media/background.png") no-repeat;
-
+   background: black;
 }
 
 :root {
@@ -143,4 +142,104 @@ body {
     font-size: 10vw;
 }
 
+.background-section {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: relative;
+    margin: 0 auto;
+    background-color: black;
+    background: url("../media/background.png") no-repeat;
+}
 
+.info-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../media/info-section.png") no-repeat;
+}
+
+.features {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: calc(33.333% - 40px);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature-icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+#opinie-klientow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Zajmuje całą wysokość ekranu */
+    background-color: black;
+}
+
+#opinie-klientow h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.opinie-container {
+    position: relative;
+    width: 60%;
+    height: 200px; /* Wysokość kontenera na opinie */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opinia {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+}
+
+.opinia.active {
+    opacity: 1;
+}
+
+.opinia p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.opinia span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+}
