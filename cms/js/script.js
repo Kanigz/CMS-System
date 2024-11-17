@@ -3,8 +3,6 @@ let togglebtn = document.querySelector('.toggle-btn');
 
 togglebtn.addEventListener('click', () => {
     sidebar.classList.toggle('active')
-    
-    
 })
 
 let currentReview = 0;
@@ -18,9 +16,12 @@ function changeReview() {
 }
 
 
-changeReview(); // Run it once immediately if needed
+changeReview();
 window.setInterval(changeReview, 5000);
 
+document.getElementById('show-all-btn').addEventListener('click', function() {
+    window.location.href = 'all-posts.html'; // Przekierowanie na stronę ze wszystkimi wpisami
+});
 
 
 

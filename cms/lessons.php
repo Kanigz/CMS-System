@@ -18,8 +18,7 @@ if (!isset($_SESSION['name'])) {
 </head>
 <body>
 
-    <!-- Panel boczny -->
-    <aside class="sidebar">
+<aside class="sidebar">
         <div class="logo">Panel Kursanta</div>
         <ul class="menu">
             <li><a href="account.php">Strona główna</a></li>
@@ -35,64 +34,6 @@ if (!isset($_SESSION['name'])) {
 
     <!-- Główna zawartość -->
     <main class="main-content">
-        <!-- Nagłówek -->
-        <header class="header">
-            <div class="welcome">Witaj! <?php echo htmlspecialchars($_SESSION['name']); ?></h2></div>
-            <div class="time" id="clock"></div>
-        </header>
-
-        <!-- Sekcja z informacjami -->
-        <section class="info-section">
-            <!-- Dni do matury -->
-            <div class="info-box">
-                <h3>Dni do matury</h3>
-                <div class="circle">169 dni</div>
-                <p>Pierwsza matura: 6 maja 2025</p>
-            </div>
-
-            <!-- Średni wynik -->
-            <div class="info-box">
-                <h3>Średni wynik z zadań</h3>
-                <p>97%</p>
-            </div>
-
-            <!-- Wiek konta -->
-            <div class="info-box">
-                <h3>Wiek konta</h3>
-                <p>87 dni</p>
-            </div>
-
-        </section>
-
-        <!-- Najnowsze wpisy -->
-        <section class="latest-posts">
-            <?php?>
-            <h2>Najnowsze wpisy</h2>
-
-            <?php
-
-            $host = 'localhost';      
-            $dbname = 'cms';    
-            $username = 'root';  
-            $password = '';       
-
-            $conn = new mysqli($host, $username, $password, $dbname);
-
-            $query = "SELECT title, description, created_at FROM articles ORDER BY created_at DESC LIMIT 2";
-            $result6 = mysqli_query($conn, $query);
-            if (!$result6) {
-                die("Błąd zapytania: " . mysqli_error($conn));
-            }
-            while ($row = mysqli_fetch_assoc($result6)) {
-            echo "<article class='post'>";
-            echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
-            echo "<p>". htmlspecialchars($row['description']). "</p>";      
-            echo "<a href='#'>Czytaj dalej</a>"; 
-            echo " </article>";
-        }
-        ?>
-        </section>
-
         <!-- Najbliższe lekcje -->
         <section class="upcoming-lessons">
             <h2>Najbliższe lekcje</h2>
@@ -110,7 +51,15 @@ if (!isset($_SESSION['name'])) {
                     <!-- Przykładowe dane -->
 
                     <?php
-                    $query = "SELECT course_name, lesson_topic, lesson_date FROM lessons ORDER BY lesson_date DESC LIMIT 2";
+
+                    $host = 'localhost';      
+                    $dbname = 'cms';    
+                    $username = 'root';  
+                    $password = '';       
+
+                    $conn = new mysqli($host, $username, $password, $dbname);
+
+                    $query = "SELECT course_name, lesson_topic, lesson_date FROM lessons";
                     $result6 = mysqli_query($conn, $query);
                     if (!$result6) {
                         die("Błąd zapytania: " . mysqli_error($conn));
@@ -130,7 +79,6 @@ if (!isset($_SESSION['name'])) {
         </section>
 
     </main>
-
 <script>
     function updateClock() {
             const now = new Date(); // Pobierz bieżącą datę i czas
