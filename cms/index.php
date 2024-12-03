@@ -62,8 +62,8 @@
         </li>
         <li class="list-item">
             <a href="#">
-                <i class='bx bx-folder' ></i>
-                <span class="link-name" style="--i:4">File Manager</span>
+            <i class='bx bx-info-circle'></i>
+                <span class="link-name" style="--i:4">O mnie</span>
             </a>
         </li>
         <li class="list-item">
@@ -151,6 +151,70 @@
         ?>
     </div>
 </section>
+ <section class="o_mnie">
+ <h2>O mnie</h2>
+    <div class="to-left">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident fugiat neque illum illo rerum consequatur, mollitia eum animi excepturi harum alias dolorum repellendus ea rem qui id dolor, delectus quidem deserunt impedit reiciendis? Vel ullam deserunt dicta, sint in vitae, soluta labore dolores veritatis, deleniti sed ipsum laboriosam voluptas eos.
+        </p>   
+        <img src="media/info-zdj1.png" alt="zdj1">
+    </div>
+    <div class="to-right">
+        <img src="media/info-zdj2.png" alt="zdj2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita aspernatur corrupti nobis, ipsum vero et ipsa omnis vel recusandae commodi reiciendis quia sequi, illum, consequatur atque. Eaque porro consectetur molestias. Ut natus iste inventore labore officiis harum, corrupti similique officia, iure, laudantium ab est. Eveniet illum cupiditate, a incidunt minima molestiae quod possimus cum nam quos qui libero quidem.
+        </p>
+    </div>
+ </section>
+ 
+ <div class="courses-section">
+ <h2>Polecane kursy maturalne stacjonarne</h2>
+    <div class="card-wrap">
+        <div class="course-card">
+            <img src="media/info-zdj2.png" alt="Kurs 1">
+            <div class="course-info">
+                <span class="badge">Kurs stacjonarny</span>
+                <h3>Kurs maturalny z matematyki podstawowej - Kraków</h3>
+                <p><i class="fas fa-user"></i> Łukasz Jarosiński</p>
+                <p><i class="fas fa-star"></i> 4.9 (152)</p>
+                <ul>
+                    <li>Kurs stacjonarny</li>
+                    <li>Matematyka podstawowa</li>
+                </ul>
+                <button>Dowiedz się więcej</button>
+            </div>
+        </div>
+        <div class="course-card">
+            <img src="media/info-zdj2.png" alt="Kurs 2">
+            <div class="course-info">
+                <span class="badge">Kurs stacjonarny</span>
+                <h3>Kurs maturalny z matematyki rozszerzonej - Warszawa</h3>
+                <p><i class="fas fa-user"></i> Katarzyna Nowak</p>
+                <p><i class="fas fa-star"></i> 4.8 (112)</p>
+                <ul>
+                    <li>Kurs stacjonarny</li>
+                    <li>Matematyka rozszerzona</li>
+                </ul>
+                <button>Dowiedz się więcej</button>
+            </div>
+        </div>
+        <div class="course-card">
+            <img src="media/info-zdj2.png" alt="Kurs 3">
+            <div class="course-info">
+                <span class="badge">Kurs stacjonarny</span>
+                <h3>Kurs maturalny z fizyki rozszerzonej - Wrocław</h3>
+                <p><i class="fas fa-user"></i> Jan Kowalski</p>
+                <p><i class="fas fa-star"></i> 4.7 (98)</p>
+                <ul>
+                    <li>Kurs stacjonarny</li>
+                    <li>Fizyka rozszerzona</li>
+                </ul>
+                <button>Dowiedz się więcej</button>
+            </div>
+        </div>
+    </div>
+            
+
 
 
 

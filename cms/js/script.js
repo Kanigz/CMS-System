@@ -23,6 +23,20 @@ document.getElementById('show-all-btn').addEventListener('click', function() {
     window.location.href = 'all-posts.html'; // Przekierowanie na stronę ze wszystkimi wpisami
 });
 
+const containers = document.querySelectorAll('.container');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+      }
+  });
+});
+
+containers.forEach(container => {
+  observer.observe(container);
+});
+
 
 
 

@@ -25,10 +25,10 @@ if (!isset($_SESSION['name'])) {
             <li><a href="account.php">Strona główna</a></li>
             <li><a href="lessons.php">Moje lekcje</a></li>
             <li><a href="courses.php">Moje kursy</a></li>
-            <li><a href="#">Zadania domowe</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Wpisy</a></li>
-            <li><a href="#">Moje konto</a></li>
+            <li><a href="homework.php">Zadania domowe</a></li>
+            <li><a href="forum.php">Forum</a></li>
+            <li><a href="articles.php">Wpisy</a></li>
+            <li><a href="account-mg.php">Moje konto</a></li>
             <li><a href="logout.php">Wyloguj</a></li>
         </ul>
     </aside>
